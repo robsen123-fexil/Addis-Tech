@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -21,8 +22,8 @@ p {
 
 img {
   margin: 5px;
-  width: 100%; /* Set a fixed width */
-  height: 100; /* Allow the height to adjust proportionally */
+  width: 200px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -34,53 +35,16 @@ hr {
 .row {
   display: flex;
   width: 100%;
-  height: auto;
+  height: 100%;
   text-align: left;
   margin-bottom: 30px;
   background: #676565;
   border-radius: 25px;
-  overflow-x: auto;
-  .row {
-  max-width: 800px; /* Set a maximum width for the rows */
-  margin: 0 auto; /* Center the rows */
-}
 }
 
 .Gallery {
-  display: flex;
-  overflow-x: auto;
   margin: 0 12%;
   padding: 10px;
-}
-
-.column {
-  padding: 0 15px;
-}
-
-.carousel-item {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-item .mask {
-  width: 100%;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.column-left {
-  display: flex;
-  flex-direction: column;
 }
 
 .column-right {
