@@ -18,20 +18,36 @@ function App() {
 
   return (
     <div className="App">
-      <h1>MOST POPULAR SONG</h1>
-      <p>Song List</p>
+      <div className="carousel-item active">
+        <div className="mask">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0070/7032/files/business_20to_20consumer.png?v=1697741444"
+            alt="carousel"
+          />
+        </div>
+        <div className="carousel-caption d-none d-sm-block mb-5">
+          <h1 className="mb-4">
+            <strong> Today recommended Song </strong>
+          </h1>
+        </div>
+      </div>
+
       <hr />
       <div className="Gallery">
         {songs.map((song) => (
           <div key={song.id} className="row">
-            <div className="column column-left">
-              <img src={song.image || getDefaultImage()} alt={song.artist} />
+            <div className="column">
+              <img
+                className="song-image"
+                src={song.image || getDefaultImage()}
+                alt={song.artist}
+              />
               <audio controls>
                 <source src={song.audio} type="audio/mp3" />
                 Your browser does not support the audio element.
               </audio>
             </div>
-            <div className="column column-right">
+            <div className="column">
               <h2>Artist Name {song.artist}</h2>
               <p>{song.albums}</p>
               <h7>YEAR OF PUBLISHED {song.year_of_published}</h7>

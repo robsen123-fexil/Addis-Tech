@@ -4,7 +4,8 @@
 
 body {
   font-family: "Oswald";
-  background: #f4f4f4;
+  background: #000; /* Set background color to black */
+  color: #FFF; /* Set text color to white */
 }
 
 h1 {
@@ -17,14 +18,14 @@ p {
   font-size: 16px;
   letter-spacing: 0.5px;
 }
+
 img {
   margin: 5px;
-  width: 100px; /* Set a fixed width */
-  height: 100px; /* Set a fixed height */
+  width: 100%; /* Set a fixed width */
+  height: 100; /* Allow the height to adjust proportionally */
   object-fit: cover;
   border-radius: 10px;
 }
-
 
 hr {
   margin: 20px 30%;
@@ -33,16 +34,53 @@ hr {
 .row {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
   text-align: left;
   margin-bottom: 30px;
-  background: #FFF;
+  background: #676565;
   border-radius: 25px;
+  overflow-x: auto;
+  .row {
+  max-width: 800px; /* Set a maximum width for the rows */
+  margin: 0 auto; /* Center the rows */
+}
 }
 
 .Gallery {
+  display: flex;
+  overflow-x: auto;
   margin: 0 12%;
   padding: 10px;
+}
+
+.column {
+  padding: 0 15px;
+}
+
+.carousel-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item .mask {
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
 }
 
 .column-right {
@@ -60,6 +98,6 @@ button {
 
 button:hover {
   background: #000;
-  color: #FFF;
+  color: #1d1b1b;
   cursor: pointer;
 }
