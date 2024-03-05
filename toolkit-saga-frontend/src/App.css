@@ -55,13 +55,19 @@ button {
   margin-bottom: 30px;
   border-width: 1px;
   border-style: solid;
-  color: #000;
+  color: #f9f9f9;
   padding: 20px;
   background: none;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  
 }
 
 button:hover {
-  background: #000;
-  color: #1d1b1b;
-  cursor: pointer;
+  background: #767272;
+  color: #f5f0f0;
+  left: 20px;
+ 
 }
+

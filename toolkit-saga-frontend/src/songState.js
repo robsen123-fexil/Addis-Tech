@@ -24,7 +24,10 @@ export const songSlice=createSlice({
 })
 
 
-
+export const addSong = (songData) => ({
+  type: "ADD_SONG",
+  payload: songData,
+});
 export const {getsongsFetch, getsongsSuccess, getsongsFailure}=songSlice.actions;
 
 export default songSlice.reducer;
